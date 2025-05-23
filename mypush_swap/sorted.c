@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 21:31:43 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/22 23:14:56 by mdinc            ###   ########.fr       */
+/*   Updated: 2025/05/23 19:59:11 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static int	is_sorted(t_stack *stack)
 void	exit_if_sorted(t_stack **stack_a)
 {
 	if (is_sorted(*stack_a))
-	{	
+	{
 		free_stack(stack_a);
-		exit(1);
+		exit(0);
 	}
 }
 

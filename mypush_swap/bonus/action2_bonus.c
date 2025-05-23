@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_bonus.c                                      :+:      :+:    :+:   */
+/*   action2_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 17:56:02 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/23 19:08:04 by mdinc            ###   ########.fr       */
+/*   Created: 2025/05/23 18:48:53 by mdinc             #+#    #+#             */
+/*   Updated: 2025/05/23 19:00:59 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include <stdlib.h>
 
-static t_stack	*new_stack_node(int value)
+void	rrr(t_stack **a, t_stack **b)
 {
-	t_stack	*node;
-
-	node = (t_stack *)malloc(sizeof(t_stack));
-	if (!node)
-		fault(NULL, NULL);
-	node->value = value;
-	node->next = NULL;
-	return (node);
+	rra(a);
+	rrb(b);
 }
 
-void	add_to_stack(t_stack **stack, int value)
+void	rr(t_stack **a, t_stack **b)
 {
-	t_stack	*new_node;
-	t_stack	*temp;
+	ra(a);
+	rb(b);
+}
 
-	new_node = new_stack_node(value);
-	if (!*stack)
-	{
-		*stack = new_node;
+void	ss(t_stack *a, t_stack *b)
+{
+	sa(a);
+	sb(b);
+}
+
+void	sb(t_stack *b)
+{
+	int	temp_value;
+
+	if (!b || !b->next)
 		return ;
-	}
-	temp = *stack;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new_node;
+	temp_value = b->value;
+	b->value = b->next->value;
+	b->next->value = temp_value;
 }

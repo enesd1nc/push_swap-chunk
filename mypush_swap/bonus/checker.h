@@ -6,12 +6,12 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:43:04 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/22 16:43:04 by mdinc            ###   ########.fr       */
+/*   Updated: 2025/05/23 19:58:38 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef CHECKER_H
+# define CHECKER_H
 
 typedef struct s_stack
 {
@@ -36,7 +36,8 @@ void				sb(t_stack *b);
 void				rrr(t_stack **a, t_stack **b);
 void				ss(t_stack *a, t_stack *b);
 void				rr(t_stack **a, t_stack **b);
-void				read_stdin(t_stack **stack_a, t_stack **stack_b);
+void				read_stdin(t_stack **stack_a, t_stack **stack_b,
+						char *line);
 int					is_sorted(t_stack *stack);
 void				add_to_stack(t_stack **stack, int value);
 

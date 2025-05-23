@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:43:59 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/22 16:43:59 by mdinc            ###   ########.fr       */
+/*   Updated: 2025/05/23 19:57:18 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ void	check_argument(t_stack *stack_a)
 
 int	main(int ac, char *av[])
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -92,7 +92,7 @@ int	main(int ac, char *av[])
 	empty_argument(av);
 	argument(ac, av, &stack_a);
 	check_argument(stack_a);
-	read_stdin(&stack_a, &stack_b);
+	read_stdin(&stack_a, &stack_b, NULL);
 	if (is_sorted(stack_a) && !stack_b)
 		ft_putstr_fd("OK\n", 1);
 	else

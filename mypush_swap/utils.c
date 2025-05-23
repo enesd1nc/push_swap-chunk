@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 14:04:19 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/20 13:51:15 by mdinc            ###   ########.fr       */
+/*   Updated: 2025/05/23 20:15:35 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,17 @@ void	fault(t_stack **a, t_stack **b)
 
 int	my_atoi(char *str, t_stack *stack)
 {
-	int					m;
+	int					mark;
 	int					i;
 	unsigned long int	s;
 
-	m = 1;
+	mark = 1;
 	i = 0;
 	s = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-')
-		m *= -1;
+		mark *= -1;
 	if ((str[i] == '-' || str[i] == '+') && !(str[++i] >= '0' && str[i] <= '9'))
 		fault(&stack, NULL);
 	if (str[i] == 0)
@@ -60,7 +60,7 @@ int	my_atoi(char *str, t_stack *stack)
 			fault(&stack, NULL);
 		s = (str[i++] - 48) + (s * 10);
 	}
-	if ((s > 2147483647 && m == 1) || (s > 2147483648 && m == -1))
+	if ((s > 2147483647 && mark == 1) || (s > 2147483648 && mark == -1))
 		fault(&stack, NULL);
-	return (s * m);
+	return (s * mark);
 }

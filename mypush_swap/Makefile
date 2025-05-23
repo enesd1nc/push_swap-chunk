@@ -8,8 +8,8 @@ CFLAGS = -Wall -Werror -Wextra
 LIBFT = libft/libft.a
 
 SRC = push_swap.c \
-      ac.c \
-      ac1.c \
+      action.c \
+      action1.c \
       argument.c \
       chunk.c \
       process.c \
@@ -20,10 +20,10 @@ SRC = push_swap.c \
 BONUS_SRC = bonus/checker.c \
             bonus/argument_bonus.c \
             bonus/utils_bonus.c \
-            bonus/ac_bonus.c \
+            bonus/action_bonus.c \
             bonus/read.c \
-			bonus/ac1_bonus.c \
-			bonus/ac2_bonus.c \
+			bonus/action1_bonus.c \
+			bonus/action2_bonus.c \
 			bonus/sorted.c \
 			bonus/stack_bonus.c \
             bonus/get_next_line/get_next_line.c \

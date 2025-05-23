@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 21:31:57 by mdinc             #+#    #+#             */
-/*   Updated: 2025/05/22 14:14:30 by mdinc            ###   ########.fr       */
+/*   Updated: 2025/05/23 19:59:29 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	set_indices(t_stack *stack, int size, int i)
 
 	array = create_value_array(stack, size);
 	if (!array)
-		fault(&stack,NULL);
+		fault(&stack, NULL);
 	bubble_sort(array, size);
 	current = stack;
 	while (current)
